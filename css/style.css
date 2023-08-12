@@ -12,6 +12,11 @@
   --bg-color: hsl(0, 0%, 0%);
   --font-color: hsl(240, 9%, 89%);
 
+  --bg-input: hsl(var(--hue), 65%, 10%);
+  --ft-input: hsl(var(--hue), 6%, 51%);
+  --color-button-1: hsl(var(--hue), 91%, 25%);
+  --color-button-2: hsl(var(--hue), 0%, 100%);
+
   --theader-bg-color: hsl(var(--hue), 72%, 13%);
   --bg-cell-1: hsl(var(--hue), 61%, 6%);
   --bg-cell-2: hsl(var(--hue), 65%, 7%);
@@ -40,6 +45,12 @@ body {
   border-width: 0;
 }
 
+input,
+button {
+  border: none;
+  background: none;
+}
+
 #app {
   margin: 0 auto;
   padding: 2rem;
@@ -53,6 +64,37 @@ header {
   justify-content: space-between;
 
   margin-top: 5rem;
+}
+
+header .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header .search input {
+  background-color: var(--bg-input);
+
+  width: 43rem;
+  height: 4.2rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+}
+
+header .search button {
+  background-color: var(--color-button-1);
+  color: var(--color-button-2);
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  height: 4.2rem;
+  padding: 0 1.6rem;
+  border-radius: 0.5rem;
 }
 
 table {
