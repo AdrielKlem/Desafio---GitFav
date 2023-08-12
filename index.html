@@ -8,7 +8,10 @@
   <body>
     <div id="app">
       <header>
-        <h1>GitFav</h1>
+        <img
+          src="assets/img/Gitfav.svg"
+          alt="logo com estrelinha escrito GitFav"
+        />
         <div class="search">
           <label for="" class="sr-only"
             >Digite o Github username que quer favoritar</label
@@ -18,7 +21,9 @@
             id="input-search"
             placeholder="Digite o Github username que quer favoritar"
           />
-          <button>&star;Favoritar</button>
+          <button>
+            <img src="assets/img/star.svg" alt="estrela" />Favoritar
+          </button>
         </div>
       </header>
       <table>
@@ -31,7 +36,36 @@
           </tr>
         </thead>
         <tbody>
-          <tr></tr>
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/AdrielKlem.png"
+                alt="Imagem de maykbrito"
+              />
+              <a href="https://github.com/AdrielKlem" target="_blank">
+                <p>AdrielKlem</p>
+                <span>AdrielKlem</span>
+              </a>
+            </td>
+            <td class="repositories">1215</td>
+            <td class="followers">5156</td>
+            <td><button class="remove">&times;</button></td>
+          </tr>
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/AdrielKlem.png"
+                alt="Imagem de maykbrito"
+              />
+              <a href="https://github.com/AdrielKlem" target="_blank">
+                <p>AdrielKlem</p>
+                <span>AdrielKlem</span>
+              </a>
+            </td>
+            <td class="repositories">1215</td>
+            <td class="followers">5156</td>
+            <td><button class="remove">&times;</button></td>
+          </tr>
         </tbody>
       </table>
     </div>
