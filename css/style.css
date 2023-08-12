@@ -12,7 +12,7 @@
   --bg-color: hsl(0, 0%, 0%);
   --font-color: hsl(240, 9%, 89%);
 
-  --header-color: hsl(var(--hue), 72%, 13%);
+  --theader-bg-color: hsl(var(--hue), 72%, 13%);
   --bg-cell-1: hsl(var(--hue), 61%, 6%);
   --bg-cell-2: hsl(var(--hue), 65%, 7%);
 
@@ -23,8 +23,21 @@ body {
   font-size: 1.6rem;
 
   background-color: var(--bg-color);
+  color: var(--font-color);
 
   height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 #app {
@@ -38,4 +51,35 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  margin-top: 5rem;
+}
+
+table {
+  margin-top: 8rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--font-color);
+}
+
+table th {
+  background-color: var(--theader-bg-color);
+
+  height: 4rem;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
 }
