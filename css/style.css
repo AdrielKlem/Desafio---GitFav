@@ -145,30 +145,35 @@ thead th {
 }
 
 thead th:first-child {
-  border-top-left-radius: 0.8rem;
+  border-top-left-radius: 1rem;
 }
 
 thead th:last-child {
-  border-top-right-radius: 0.8rem;
+  border-top-right-radius: 1rem;
 }
 
 tbody {
   width: 100%;
 }
 
-tbody tr {
-  display: flex;
-  width: 100%;
-  height: 12rem;
+tbody td {
   padding: 2rem;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr td {
   background-color: var(--bg-cell-1);
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
   background-color: var(--bg-cell-2);
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 1rem;
 }
 
 tbody .user {
@@ -183,4 +188,9 @@ tbody .user img {
 
   object-fit: cover;
   border-radius: 50%;
+}
+
+tbody .remove {
+  color: #f00;
+  cursor: pointer;
 }
