@@ -1,20 +1,32 @@
 :root {
+  --ff-mono: "Roboto Mono", monospace;
   --bg-table: hsl(var(--hue), 63%, 3%);
+  --ft-empty: hsl(var(--hue), 4%, 32%);
 }
 
-table.empty {
-  background: var(--bg-table) url(../assets/img/Estrela.svg) no-repeat center;
+#app div:not(.empty) {
+  display: none;
+}
+
+div.empty {
+  background: var(--bg-table) no-repeat center;
   border-radius: 1rem;
   height: 40rem;
 
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
 }
 
-table.empty::after {
-  position: absolute;
-  content: "OPa";
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  display: block;
+div.empty img {
+  width: 15.2rem;
+}
+
+div.empty p {
+  font-family: var(--ff-mono);
+  color: var(--ft-empty);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
 }
