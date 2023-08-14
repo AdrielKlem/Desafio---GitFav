@@ -152,10 +152,6 @@ thead th:last-child {
   border-top-right-radius: 1rem;
 }
 
-tbody {
-  width: 100%;
-}
-
 tbody td {
   padding: 2rem;
 }

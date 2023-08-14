@@ -1,0 +1,20 @@
+:root {
+  --bg-table: hsl(var(--hue), 63%, 3%);
+}
+
+table.empty {
+  background: var(--bg-table) url(../assets/img/Estrela.svg) no-repeat center;
+  border-radius: 1rem;
+  height: 40rem;
+
+  position: relative;
+}
+
+table.empty::after {
+  position: absolute;
+  content: "OPa";
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  display: block;
+}
