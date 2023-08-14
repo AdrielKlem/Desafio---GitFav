@@ -4,19 +4,23 @@
   --ft-empty: hsl(var(--hue), 4%, 32%);
 }
 
-#app div:not(.empty) {
+#app table + div:not(.empty) {
   display: none;
 }
 
 div.empty {
   background: var(--bg-table) no-repeat center;
-  border-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
   height: 40rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6rem;
+  border: 1px solid var(--line-color);
+  border-top: none;
 }
 
 div.empty img {

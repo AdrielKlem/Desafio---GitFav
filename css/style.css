@@ -64,8 +64,9 @@ a {
 #app {
   margin: 0 auto;
   padding: 2rem;
-
   max-width: 128rem;
+
+  display: grid;
 }
 
 header {
@@ -129,8 +130,9 @@ table {
   border-collapse: collapse;
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
-  outline: 1px solid var(--line-color);
+  border: 1px solid var(--line-color);
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 table * {
@@ -165,10 +167,6 @@ tbody tr td {
 
 tbody tr {
   border-bottom: 1px solid var(--line-color);
-}
-
-tbody tr:last-child {
-  border-bottom: none;
 }
 
 tbody tr:nth-child(even) td {
