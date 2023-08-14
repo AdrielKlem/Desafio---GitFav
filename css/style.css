@@ -126,11 +126,9 @@ header .search button:hover #estrela path {
 
 table {
   margin-top: 8rem;
-  width: 100%;
+  /* width: 100%; */
   border-collapse: collapse;
 
-  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--line-color);
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -138,6 +136,36 @@ table {
 table * {
   font-size: 2rem;
   color: var(--font-color);
+}
+
+thead,
+tbody {
+  display: block;
+}
+
+tbody {
+  overflow-y: scroll;
+  max-height: 40rem;
+}
+
+tbody::-webkit-scrollbar {
+  width: 10px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: var(--line-color);
+}
+
+tbody::-webkit-scrollbar-track {
+  background-color: var(--theader-bg-color);
+}
+
+table th {
+  min-width: 26.5rem;
+}
+
+table td {
+  width: 26rem;
 }
 
 thead th {
@@ -169,6 +197,10 @@ tbody tr {
   border-bottom: 1px solid var(--line-color);
 }
 
+tbody tr:last-child {
+  border-bottom: none;
+}
+
 tbody tr:nth-child(even) td {
   background-color: var(--bg-cell-2);
 }
@@ -185,6 +217,7 @@ tbody .user {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  width: 30rem;
 }
 
 tbody .user img {
