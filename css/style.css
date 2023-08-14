@@ -23,7 +23,7 @@
   --bg-cell-1: hsl(var(--hue), 61%, 6%);
   --bg-cell-2: hsl(var(--hue), 65%, 7%);
 
-  --scroll-color: hsl(var(--hue), 31%, 42%);
+  --line-color: hsl(var(--hue), 31%, 42%);
 }
 
 body {
@@ -129,6 +129,8 @@ table {
   border-collapse: collapse;
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  outline: 1px solid var(--line-color);
+  border-radius: 1rem;
 }
 
 table * {
@@ -139,9 +141,10 @@ table * {
 thead th {
   background-color: var(--theader-bg-color);
 
-  height: 4rem;
+  height: 6rem;
   text-align: left;
   padding: 0 2rem;
+  font-size: 2.5rem;
 }
 
 thead th:first-child {
@@ -158,6 +161,14 @@ tbody td {
 
 tbody tr td {
   background-color: var(--bg-cell-1);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--line-color);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
 }
 
 tbody tr:nth-child(even) td {
